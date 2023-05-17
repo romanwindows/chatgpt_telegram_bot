@@ -1,7 +1,7 @@
 import { Telegraf, session } from "telegraf";
 import { message } from "telegraf/filters"
-import { ogg } from "./oggConverter.js"
-import { openai } from "./openai.js"
+import { ogg } from "./src/oggConverter.js"
+import { openai } from "./src/openai.js"
 import { code } from 'telegraf/format'
 
 const INITIAL_SESSION = {

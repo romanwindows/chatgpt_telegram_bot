@@ -2,14 +2,14 @@
   "name": "chatgpt_bot",
   "version": "1.0.0",
   "description": "",
-  "main": "./src/main.js",
+  "main": "index.js",
   "type": "module",
   "engines": {
     "node": "16.x"
   },
   "scripts": {
-    "dev": "cross-env NODE_ENV=development nodemon ./src/main.js",
-    "start": "cross-env NODE_ENV=production node ./src/main.js"
+    "dev": "cross-env NODE_ENV=development nodemon index.js",
+    "start": "cross-env NODE_ENV=production node index.js"
   },
   "keywords": [],
   "author": "",
