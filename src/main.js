@@ -1,6 +1,5 @@
 import { Telegraf, session } from "telegraf";
 import { message } from "telegraf/filters"
-import config from "config"
 import { ogg } from "./oggConverter.js"
 import { openai } from "./openai.js"
 import { code } from 'telegraf/format'
@@ -10,7 +9,7 @@ const INITIAL_SESSION = {
 }
 
 
-const bot = new Telegraf(config.get("TELEGRAM_TOKEN"))
+const bot = new Telegraf(process.env.TELEGRAM_TOKEN)
 
 bot.use(session())
 
@@ -41,7 +40,7 @@ bot.on(message('text'), async (ctx) => {
 
         await ctx.reply(response.content)
     } catch(e) {
-        console.log(`Error with voice message`, e.message);
+        console.log(`Error with text message`, e.message);
     }
 
 })
